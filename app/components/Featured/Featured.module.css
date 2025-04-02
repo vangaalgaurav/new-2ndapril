@@ -1,0 +1,121 @@
+.featuredSection {
+  background-color: var(--light-gray);
+  padding: 2rem 0;
+  margin: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  border-left: 5px solid var(--primary);
+  padding-left: 15px;
+  margin: 2rem 0 1.5rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.featuredCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.featuredCard:hover {
+  transform: translateY(-10px);
+}
+
+.featuredImage {
+  height: 160px;
+  background-color: var(--mid-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.featuredContent {
+  padding: 1.5rem;
+}
+
+.featuredTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featuredRank {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.featuredDescription {
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.featuredMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.featuredCategory {
+  background-color: var(--light-gray);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+}
+
+.agentControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.playButton, .stopButton {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.playButton {
+  background-color: var(--primary);
+}
+
+.stopButton {
+  background-color: var(--secondary);
+}
+
+.playButton:hover {
+  background-color: #c01741;
+}
+
+.stopButton:hover {
+  background-color: #000;
+} 

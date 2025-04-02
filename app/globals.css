@@ -1,0 +1,41 @@
+:root {
+  --primary: #e61e4d;
+  --secondary: #121212;
+  --accent: #2b87ff;
+  --light-gray: #f7f7f7;
+  --mid-gray: #e5e5e5;
+  --dark-gray: #767676;
+  --text-dark: #222222;
+  --text-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secondary);
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 4px solid var(--primary);
+  padding-bottom: 1rem;
+} 

@@ -1,0 +1,139 @@
+.topCharts {
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  border-left: 5px solid var(--primary);
+  padding-left: 15px;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.viewAll {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  text-transform: none;
+  transition: color 0.3s;
+}
+
+.viewAll:hover {
+  color: #c01741;
+}
+
+.chartHeader {
+  display: grid;
+  grid-template-columns: 80px 60px 1fr 150px 120px;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--mid-gray);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.chartList {
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chartItem {
+  display: grid;
+  grid-template-columns: 80px 60px 1fr 150px 120px;
+  padding: 1rem;
+  border-bottom: 1px solid var(--mid-gray);
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.chartItem:last-child {
+  border-bottom: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.chartItem:hover {
+  background-color: #f0f0f0;
+}
+
+.chartItem:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+.chartPosition {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+.positionChange {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.up { color: green; }
+.down { color: red; }
+.new { color: var(--primary); font-weight: bold; }
+.same { color: var(--dark-gray); }
+
+.agentImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--mid-gray);
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.agentInfo {
+  display: flex;
+  align-items: center;
+}
+
+.agentControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.playButton, .stopButton {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.playButton {
+  background-color: var(--primary);
+}
+
+.stopButton {
+  background-color: var(--secondary);
+}
+
+.playButton:hover {
+  background-color: #c01741;
+}
+
+.stopButton:hover {
+  background-color: #000;
+} 
