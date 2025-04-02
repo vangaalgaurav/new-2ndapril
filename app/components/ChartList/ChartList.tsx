@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import styles from './ChartList.module.css'
 import PlayModal from './PlayModal';
