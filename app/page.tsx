@@ -7,17 +7,26 @@ import CTA from './components/CTA/CTA'
 
 export default function Home() {
   return (
-    <main>
+    <main className="main-content">
       <Header />
-      <div className="container">
-        <h1 className="main-title">The Official Voice Agent Charts</h1>
-        <ChartList />
-      </div>
       <Hero />
-      <div className="container">
-        <Categories />
-      </div>
-      <Featured />
+      <section className="charts-section">
+        <div className="container">
+          <h1 className="main-title">The Official Voice Agent Charts</h1>
+          <p className="section-description">Discover the top performing voice agents in the industry</p>
+          <ChartList />
+        </div>
+      </section>
+      <section className="categories-section">
+        <div className="container">
+          <Categories />
+        </div>
+      </section>
+      <section className="featured-section">
+        <div className="container">
+          <Featured />
+        </div>
+      </section>
       <CTA />
     </main>
   )

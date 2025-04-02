@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styles from './ChartList.module.css'
+import PlayModal from './PlayModal';
 
 const chartItems = [
   {
@@ -8,7 +10,8 @@ const chartItems = [
     company: 'Financial Advisory Inc.',
     rating: 5,
     reviews: 482,
-    icon: '🤖'
+    icon: '🤖',
+    imageUrl: '/images/voice-agents/finance-buddy.jpg'
   },
   {
     position: 2,
@@ -17,7 +20,8 @@ const chartItems = [
     company: 'Global Bookings Ltd',
     rating: 4,
     reviews: 351,
-    icon: '🏨'
+    icon: '🏨',
+    imageUrl: '/images/voice-agents/travel-ease.jpg'
   },
   {
     position: 3,
@@ -26,7 +30,8 @@ const chartItems = [
     company: 'Lead Conversion Systems',
     rating: 4,
     reviews: 298,
-    icon: '🛒'
+    icon: '🛒',
+    imageUrl: '/images/voice-agents/sales-guru.jpg'
   },
   {
     position: 4,
@@ -35,7 +40,8 @@ const chartItems = [
     company: 'HealthTech Solutions',
     rating: 5,
     reviews: 187,
-    icon: '🩺'
+    icon: '🩺',
+    imageUrl: '/images/voice-agents/medi-connect.jpg'
   },
   {
     position: 5,
@@ -44,7 +50,8 @@ const chartItems = [
     company: 'Productivity Tools Inc.',
     rating: 4,
     reviews: 243,
-    icon: '💼'
+    icon: '💼',
+    imageUrl: '/images/voice-agents/task-wizard.jpg'
   },
   {
     position: 6,
@@ -94,6 +101,8 @@ const chartItems = [
 ]
 
 export default function ChartList() {
+  const [selectedItem, setSelectedItem] = useState<typeof chartItems[0] | null>(null);
+
   return (
     <section className={styles.topCharts}>
       <h2 className={styles.sectionTitle}>
@@ -127,12 +136,26 @@ export default function ChartList() {
               <div className={styles.reviewCount}>{item.reviews} reviews</div>
             </div>
             <div className={styles.agentControls}>
-              <button className={styles.playButton}>▶</button>
+              <button 
+                className={styles.playButton}
+                onClick={() => setSelectedItem(item)}
+                aria-label={`Play ${item.name}`}
+              >
+                ▶
+              </button>
               <button className={styles.stopButton}>■</button>
             </div>
           </div>
         ))}
       </div>
+      {selectedItem && (
+        <PlayModal
+          isOpen={!!selectedItem}
+          onClose={() => setSelectedItem(null)}
+          imageUrl={selectedItem.imageUrl}
+          title={selectedItem.name}
+        />
+      )}
     </section>
   )
 } 
